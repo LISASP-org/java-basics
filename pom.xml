@@ -18,8 +18,8 @@
         <module>basics-jre</module>
         <module>basics-notification</module>
 
-        <module>basics-spring-jpa</module>
         <module>basics-spring-jms</module>
+        <module>basics-spring-jpa</module>
     </modules>
 
     <name>Java Basics</name>
@@ -34,16 +34,10 @@
 
         <slf4j.version>1.7.32</slf4j.version>
         <lombok.version>1.18.20</lombok.version>
-        <xstream.version>1.4.18</xstream.version>
         <jetbrains.annotations.version>16.0.2</jetbrains.annotations.version>
 
         <junit-jupiter.version>5.7.2</junit-jupiter.version>
-        <junit.version>4.13.2</junit.version>
-        <testcontainers.version>1.16.0</testcontainers.version>
         <mockito.version>3.12.4</mockito.version>
-        <mockrunner.version>2.0.6</mockrunner.version>
-        <webdrivermanager.version>5.0.1</webdrivermanager.version>
-        <cloning.version>1.10.3</cloning.version>
 
         <h2.version>1.4.200</h2.version>
 
@@ -95,11 +89,6 @@
                 <version>${junit-jupiter.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
-            </dependency>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
