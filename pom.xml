@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.0-M2</version>
+        <version>2.5.5</version>
     </parent>
 
     <groupId>org.lisasp.basics</groupId>
@@ -34,9 +34,9 @@
 
         <slf4j.version>1.7.32</slf4j.version>
         <lombok.version>1.18.20</lombok.version>
-        <jetbrains.annotations.version>16.0.2</jetbrains.annotations.version>
+        <jetbrains.annotations.version>22.0.0</jetbrains.annotations.version>
 
-        <junit-jupiter.version>5.7.2</junit-jupiter.version>
+        <junit-jupiter.version>5.8.1</junit-jupiter.version>
         <mockito.version>3.12.4</mockito.version>
 
         <h2.version>1.4.200</h2.version>
