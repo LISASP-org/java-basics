@@ -35,12 +35,29 @@ class BaseEntityTests {
     }
 
     @Test
+    void notEqualsId() {
+        TestBaseEntity entity1 = new TestBaseEntity(null);
+        TestBaseEntity entity2 = new TestBaseEntity();
+
+        assertNotEquals(entity1, entity2);
+    }
+
+    @Test
     void nullId() {
         TestBaseEntity entity1 = new TestBaseEntity();
         TestBaseEntity entity2 = new TestBaseEntity(null);
 
         assertNotEquals(entity1, entity2);
         assertNotEquals(entity2, entity1);
+    }
+
+    @Test
+    void bothWithNullId() {
+        TestBaseEntity entity1 = new TestBaseEntity(null);
+        TestBaseEntity entity2 = new TestBaseEntity(null);
+
+        assertEquals(entity1, entity2);
+        assertEquals(entity2, entity1);
     }
 
     @Test

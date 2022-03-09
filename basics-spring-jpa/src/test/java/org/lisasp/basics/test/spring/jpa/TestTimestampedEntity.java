@@ -1,15 +1,14 @@
 package org.lisasp.basics.test.spring.jpa;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.lisasp.basics.spring.jpa.TimestampedEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import java.lang.reflect.Field;
+import java.time.LocalDateTime;
 
-@Entity()
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
@@ -46,5 +45,14 @@ public class TestTimestampedEntity extends TimestampedEntity {
                              getVersion(),
                              getLastModification() == null ? "<null>" : getLastModification().toString(),
                              getName());
+    }
+
+    @SneakyThrows
+    public void simulateSave(LocalDateTime timestamp) {
+        beforeSave();
+        Field field = TimestampedEntity.class.getDeclaredField("lastModification");
+        field.setAccessible(true);
+        field.set(this, timestamp);
+        field.setAccessible(false);
     }
 }
