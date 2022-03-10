@@ -130,15 +130,7 @@ class ActualFileTest {
             assertThrows(NullPointerException.class, () -> actualFile.get(null));
         }
     }
-
-    @Nested
-    class GetSeparatorTest {
-        @Test
-        void getSeparatorTest() {
-            assertEquals(File.separator, actualFile.getSeparator());
-        }
-    }
-
+    
     @Nested
     class ExistsTest {
         @Test

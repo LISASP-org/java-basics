@@ -18,6 +18,4 @@ public interface FileFacade {
     void createDirectories(Path path) throws IOException;
 
     Stream<Path> find(Path basePath, int maxDepth, BiPredicate<Path, BasicFileAttributes> matcher) throws IOException;
-
-    String getSeparator();
 }

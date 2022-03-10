@@ -53,11 +53,6 @@ public class ActualFile implements FileFacade {
         Files.createDirectories(path);
     }
 
-    @Override
-    public String getSeparator() {
-        return File.separator;
-    }
-
     public Stream<Path> find(Path basePath, int maxDepth, @NonNull BiPredicate<Path, BasicFileAttributes> matcher) throws IOException {
         return Files.find(basePath, maxDepth, matcher);
     }
