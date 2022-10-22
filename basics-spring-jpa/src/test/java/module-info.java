@@ -3,6 +3,8 @@ module org.lisasp.basics.test.jpa {
 
     opens org.lisasp.basics.test.spring.jpa to spring.core, org.hibernate.orm.core, org.junit.platform.commons;
 
+    requires jakarta.persistence;
+
     requires spring.data.jpa;
     requires spring.beans;
     requires spring.context;
@@ -22,5 +24,4 @@ module org.lisasp.basics.test.jpa {
     requires transitive org.junit.jupiter.params;
 
     requires static lombok;
-    requires java.persistence;
 }

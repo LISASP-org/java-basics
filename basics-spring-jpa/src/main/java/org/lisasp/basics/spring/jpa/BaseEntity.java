@@ -1,9 +1,10 @@
 package org.lisasp.basics.spring.jpa;
 
 import lombok.Getter;
+
+import jakarta.persistence.*;
 import org.springframework.data.domain.Persistable;
 
-import javax.persistence.*;
 import java.util.Objects;
 import java.util.UUID;
 

@@ -5,10 +5,10 @@ import org.lisasp.basics.spring.jms.JsonMessageConverter;
 import org.lisasp.basics.test.spring.jms.data.TestData;
 import org.lisasp.basics.test.spring.jms.data.TestRecord;
 
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.Session;
-import javax.jms.TextMessage;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
+import jakarta.jms.Session;
+import jakarta.jms.TextMessage;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -3,8 +3,8 @@ package org.lisasp.basics.test.spring.jpa;
 import lombok.*;
 import org.lisasp.basics.spring.jpa.TimestampedEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import java.lang.reflect.Field;
 import java.time.LocalDateTime;
 

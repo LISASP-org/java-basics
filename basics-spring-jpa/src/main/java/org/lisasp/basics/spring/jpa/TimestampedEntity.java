@@ -3,8 +3,8 @@ package org.lisasp.basics.spring.jpa;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
+import jakarta.persistence.Column;
+import jakarta.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Objects;
