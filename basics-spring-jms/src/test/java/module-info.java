@@ -10,7 +10,7 @@ module org.lisasp.basics.test.jms {
     requires spring.boot.autoconfigure;
     requires spring.boot;
 
-    requires jakarta.jms.api;
+    requires jakarta.messaging;
 
     requires org.mockito;
     requires net.bytebuddy;
