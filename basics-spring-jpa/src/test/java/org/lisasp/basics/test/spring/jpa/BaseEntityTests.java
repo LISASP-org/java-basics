@@ -16,7 +16,7 @@ class BaseEntityTests {
 
         assertTrue(entity.isNew());
         assertNotNull(entity.getId());
-        assertTrue(entity.getId().length() > 20);
+        assertEquals(36, entity.getId().length());
     }
 
     @Test

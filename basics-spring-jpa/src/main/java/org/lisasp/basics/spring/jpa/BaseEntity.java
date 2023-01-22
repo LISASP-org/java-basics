@@ -1,8 +1,7 @@
 package org.lisasp.basics.spring.jpa;
 
-import lombok.Getter;
-
 import jakarta.persistence.*;
+import lombok.Getter;
 import org.springframework.data.domain.Persistable;
 
 import java.util.Objects;
@@ -21,12 +20,12 @@ public abstract class BaseEntity implements Persistable<String> {
     }
 
     @Id
-    @Column(nullable = false)
+    @Column(nullable = false, length = 40)
     private String id;
 
     @Version
     @Column(nullable = false)
-    private long version = 0;
+    private int version = 0;
 
     @Override
     public boolean isNew() {

@@ -24,7 +24,7 @@ class BaseEntityJPATests {
 
         assertTrue(entity.isNew());
         assertNotNull(entity.getId());
-        assertTrue(entity.getId().length() > 10);
+        assertTrue(entity.getId().length() > 30);
     }
 
     @Test
