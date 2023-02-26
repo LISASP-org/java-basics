@@ -3,7 +3,7 @@ package org.lisasp.basics.test.notification.primitive;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.lisasp.basics.notification.primitive.ByteListener;
+import org.lisasp.basics.notification.primitive.ByteConsumer;
 import org.lisasp.basics.notification.primitive.ByteNotifier;
 import org.mockito.Mockito;
 
@@ -12,7 +12,7 @@ import static org.mockito.Mockito.*;
 class ByteNotifierTest {
 
     private ByteNotifier notifier;
-    private ByteListener listener;
+    private ByteConsumer listener;
 
     private byte[] data;
 
@@ -23,7 +23,7 @@ class ByteNotifierTest {
             data[x + 128] = (byte) x;
         }
 
-        listener = Mockito.mock(ByteListener.class);
+        listener = Mockito.mock(ByteConsumer.class);
 
         notifier = new ByteNotifier();
         notifier.register(listener);

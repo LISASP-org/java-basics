@@ -1,3 +1,6 @@
+/**
+ * This module provides opinionated implementations for spring.jpa
+ */
 module org.lisasp.basics.spring.jpa {
     exports org.lisasp.basics.spring.jpa;
     opens org.lisasp.basics.spring.jpa;

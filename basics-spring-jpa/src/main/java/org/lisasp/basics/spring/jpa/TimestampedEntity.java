@@ -1,19 +1,27 @@
 package org.lisasp.basics.spring.jpa;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Objects;
 
+/**
+ * BaseEntity extension with modification timestamp handling
+ */
 @MappedSuperclass
 @NoArgsConstructor
 @Getter
 public abstract class TimestampedEntity extends BaseEntity {
 
+    /**
+     * Constructor
+     *
+     * @param id id of the entity
+     */
     protected TimestampedEntity(String id) {
         super(id);
     }

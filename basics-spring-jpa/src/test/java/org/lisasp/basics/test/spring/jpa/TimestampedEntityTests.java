@@ -1,6 +1,5 @@
 package org.lisasp.basics.test.spring.jpa;
 
-import lombok.SneakyThrows;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -73,8 +72,8 @@ class TimestampedEntityTests {
         TestTimestampedEntity entity1 = new TestTimestampedEntity("Id", "test");
         TestTimestampedEntity entity2 = new TestTimestampedEntity("Id", "test");
 
-        entity1.simulateSave(LocalDateTime.of(2022,3,9,12,0));
-        entity2.simulateSave(LocalDateTime.of(2022,3,9,12,0));
+        entity1.simulateSave(LocalDateTime.of(2022, 3, 9, 12, 0));
+        entity2.simulateSave(LocalDateTime.of(2022, 3, 9, 12, 0));
 
         assertEquals(entity1, entity2);
         assertEquals(entity2, entity1);

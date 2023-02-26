@@ -1,13 +1,12 @@
 package org.lisasp.basics.test.spring.jpa;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.lisasp.basics.spring.jpa.BaseEntity;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 
 @Entity
 @Getter
@@ -28,7 +27,7 @@ public class TestJPABaseEntity extends BaseEntity {
         if (!super.equals(o)) {
             return false;
         }
-        TestJPABaseEntity entity = (TestJPABaseEntity)o;
+        TestJPABaseEntity entity = (TestJPABaseEntity) o;
         if ((name == null) != (entity.getName() == null)) {
             return false;
         }

@@ -110,9 +110,9 @@ class ActualFileTest {
         @Test
         void read() throws IOException {
             Files.write(filename,
-                        new byte[]{0x02, 0x03, 0x05, 0x06},
-                        StandardOpenOption.CREATE_NEW,
-                        StandardOpenOption.WRITE);
+                    new byte[]{0x02, 0x03, 0x05, 0x06},
+                    StandardOpenOption.CREATE_NEW,
+                    StandardOpenOption.WRITE);
 
             byte[] actual = actualFile.get(filename);
 
@@ -130,7 +130,7 @@ class ActualFileTest {
             assertThrows(NullPointerException.class, () -> actualFile.get(null));
         }
     }
-    
+
     @Nested
     class ExistsTest {
         @Test
@@ -242,13 +242,13 @@ class ActualFileTest {
         @Test
         void pathNullTest() {
             assertThrows(NullPointerException.class,
-                         () -> actualFile.find(null, 0, (path, basicFileAttributes) -> true));
+                    () -> actualFile.find(null, 0, (path, basicFileAttributes) -> true));
         }
 
         @Test
         void matcherNullTest() {
             assertThrows(NullPointerException.class,
-                         () -> actualFile.find(dirname, 0, null));
+                    () -> actualFile.find(dirname, 0, null));
         }
     }
 

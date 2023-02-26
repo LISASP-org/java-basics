@@ -1,3 +1,6 @@
+/**
+ * This module provides base classes for simple event based approaches.
+ */
 module org.lisasp.basics.notification {
     exports org.lisasp.basics.notification;
     exports org.lisasp.basics.notification.primitive;

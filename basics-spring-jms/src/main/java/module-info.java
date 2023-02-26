@@ -1,3 +1,6 @@
+/**
+ * This module provides extensions to spring.jms.
+ */
 module org.lisasp.basics.spring.jms {
     exports org.lisasp.basics.spring.jms;
 

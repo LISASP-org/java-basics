@@ -1,10 +1,10 @@
 package org.lisasp.basics.test.spring.jpa;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import lombok.*;
 import org.lisasp.basics.spring.jpa.TimestampedEntity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import java.lang.reflect.Field;
 import java.time.LocalDateTime;
 
@@ -41,10 +41,10 @@ public class TestTimestampedEntity extends TimestampedEntity {
 
     public String toString() {
         return String.format("TestEntity(%s, %d, %s, %s)",
-                             getId(),
-                             getVersion(),
-                             getLastModification() == null ? "<null>" : getLastModification().toString(),
-                             getName());
+                getId(),
+                getVersion(),
+                getLastModification() == null ? "<null>" : getLastModification().toString(),
+                getName());
     }
 
     @SneakyThrows

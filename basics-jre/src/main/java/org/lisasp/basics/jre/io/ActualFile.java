@@ -2,7 +2,6 @@ package org.lisasp.basics.jre.io;
 
 import lombok.NonNull;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
@@ -12,25 +11,29 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.function.BiPredicate;
 import java.util.stream.Stream;
 
+/**
+ * Uses the Files class to provide access to the filesystem.
+ */
 public class ActualFile implements FileFacade {
+
     @Override
     public void append(Path file, byte... b) throws IOException {
         Files.createDirectories(file.getParent());
         Files.write(file,
-                    b,
-                    StandardOpenOption.WRITE,
-                    StandardOpenOption.APPEND,
-                    StandardOpenOption.CREATE);
+                b,
+                StandardOpenOption.WRITE,
+                StandardOpenOption.APPEND,
+                StandardOpenOption.CREATE);
     }
 
     @Override
     public void put(Path file, byte... b) throws IOException {
         Files.createDirectories(file.getParent());
         Files.write(file,
-                    b,
-                    StandardOpenOption.WRITE,
-                    StandardOpenOption.TRUNCATE_EXISTING,
-                    StandardOpenOption.CREATE);
+                b,
+                StandardOpenOption.WRITE,
+                StandardOpenOption.TRUNCATE_EXISTING,
+                StandardOpenOption.CREATE);
     }
 
     @Override

@@ -2,16 +2,18 @@ package org.lisasp.basics.spring.jms;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
+import jakarta.jms.Session;
+import jakarta.jms.TextMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.jms.support.converter.MessageConversionException;
 import org.springframework.jms.support.converter.MessageConverter;
 
-import jakarta.jms.JMSException;
-import jakarta.jms.Message;
-import jakarta.jms.Session;
-import jakarta.jms.TextMessage;
-
+/**
+ * Converts json-text to and from objects
+ */
 @Slf4j
 public class JsonMessageConverter implements MessageConverter {
 
@@ -19,11 +21,19 @@ public class JsonMessageConverter implements MessageConverter {
 
     private static final String messageFormat = "%s|%s";
 
+    /**
+     * Constructor
+     */
     public JsonMessageConverter() {
         log.info("Initializing");
         mapper.findAndRegisterModules();
     }
 
+    /**
+     * Registers a jackson module to the internal mapper
+     *
+     * @param module Jackson module
+     */
     public void registerModule(com.fasterxml.jackson.databind.Module module) {
         mapper.registerModule(module);
     }

@@ -7,14 +7,25 @@ import org.springframework.data.domain.Persistable;
 import java.util.Objects;
 import java.util.UUID;
 
+/**
+ * Entity implementation with id and version handling.
+ */
 @MappedSuperclass
 @Getter
 public abstract class BaseEntity implements Persistable<String> {
 
+    /**
+     * Constructor
+     */
     protected BaseEntity() {
         id = UUID.randomUUID().toString();
     }
 
+    /**
+     * Constructor
+     *
+     * @param id id of the entity
+     */
     protected BaseEntity(String id) {
         this.id = id;
     }
@@ -32,6 +43,9 @@ public abstract class BaseEntity implements Persistable<String> {
         return version < 1;
     }
 
+    /**
+     * JPA internal method to provide version increment.
+     */
     @PrePersist
     @PreUpdate
     protected void beforeSave() {
