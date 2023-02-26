@@ -56,7 +56,8 @@
     </distributionManagement>
 
     <scm>
-        <connection>https://github.com/LISASP-org/java-basics.git</connection>
+        <connection>scm:git:ssh://git@github.com:LISASP-org/java-basics.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:LISASP-org/java-basics.git</developerConnection>
         <url>https://github.com/LISASP-org/java-basics</url>
     </scm>
 
