@@ -2,6 +2,7 @@ package org.lisasp.basics.spring.jpa;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.ToString;
 import org.springframework.data.domain.Persistable;
 
 import java.util.Objects;
@@ -12,6 +13,7 @@ import java.util.UUID;
  */
 @MappedSuperclass
 @Getter
+@ToString
 public abstract class BaseEntity implements Persistable<String> {
 
     /**

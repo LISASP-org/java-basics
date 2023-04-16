@@ -16,11 +16,6 @@ public class TestBaseEntity extends BaseEntity {
         super(id);
     }
 
-    @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
-    }
-
     public void simulateSave() {
         beforeSave();
     }

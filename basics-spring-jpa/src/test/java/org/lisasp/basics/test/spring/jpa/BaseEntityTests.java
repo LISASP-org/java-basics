@@ -113,4 +113,10 @@ class BaseEntityTests {
 
         assertNotEquals(entity1.hashCode(), entity2.hashCode());
     }
+
+    @Test
+    void toStringFormat() {
+        TestBaseEntity entity = new TestBaseEntity("1");
+        assertEquals("BaseEntity(id=1, version=0)", entity.toString());
+    }
 }
