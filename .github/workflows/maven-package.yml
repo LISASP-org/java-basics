@@ -4,6 +4,10 @@
 name: Java CI with Maven
 
 on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
     branches: [ main ]
 
@@ -18,5 +22,6 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: 17
+          distribution: 'adopt'
       - name: Build with Maven
         run: mvn -B package --file pom.xml
